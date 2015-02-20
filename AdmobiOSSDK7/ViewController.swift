@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         admobBanner.rootViewController = self
         self.view.addSubview(admobBanner)
         var request: GADRequest = GADRequest()
+        // enter your test device id here, so the ad is not displayed on your test device
+        // but it still displays a test ad banner
+        // avoid accidently click
+        // it is a string array, so you can add more than one device id here
         request.testDevices = [""]
         admobBanner.loadRequest(request)
     }
